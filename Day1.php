@@ -1,3 +1,5 @@
+                    <!-- VARAIBLES  $  DATATYPES -->
+                    
 <?php 
 
 // $age = 20;

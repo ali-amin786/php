@@ -1,3 +1,4 @@
+                    <!-- ARITHEMETIC  &  COMBINED  ASSIGNMENTS -->
 <?php
 // //  percentage 
 // $obtainedmarks = 400; 
