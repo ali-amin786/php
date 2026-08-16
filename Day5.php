@@ -1,6 +1,6 @@
 <?php 
 echo "                                  <!-- SWITCH  &  TERMARY OPERATORS --> // ";
-$day = 'Wednesday' ;
+$day = 'Sunday' ;
 
 switch ($day){
     case "monday":
