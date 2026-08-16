@@ -1,8 +1,5 @@
-                                  <!-- SWITCH  &  TERMARY OPERATORS --> //
-
-
 <?php 
-
+echo "                                  <!-- SWITCH  &  TERMARY OPERATORS --> // ";
 $day = 'Wednesday' ;
 
 switch ($day){

@@ -1,6 +1,6 @@
-                    <!-- VARAIBLES  $  DATATYPES -->
-                    
 <?php 
+
+echo "                    <!-- VARAIBLES  $  DATATYPES -->";
 
 // $age = 20;
 // echo  print("hellow world");

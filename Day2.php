@@ -1,5 +1,8 @@
                     <!-- ARITHEMETIC  &  COMBINED  ASSIGNMENTS -->
 <?php
+
+
+echo "                     <!-- ARITHEMETIC  &  COMBINED  ASSIGNMENTS -->";
 // //  percentage 
 // $obtainedmarks = 400; 
 // $totalmarks = 500 ;

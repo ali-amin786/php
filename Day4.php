@@ -1,7 +1,5 @@
-                                 <!-- MARKSHEET  +  IF , ELSE , ELSE IF -->
-
 <?php
- 
+echo "                                 <!-- MARKSHEET  +  IF , ELSE , ELSE IF -->"; 
 
 $name = "Ali";
 
