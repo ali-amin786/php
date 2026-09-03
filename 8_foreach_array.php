@@ -1,4 +1,7 @@
 <?php 
+
+echo "-----------------foreach----------------- <br><br>";
+
 $Students = [
     [1,"Areeh",19,"Uni"],
     [2,"Ali",17,"12th"],
