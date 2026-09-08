@@ -1,15 +1,31 @@
 <?php 
+
+// $Students = [
+//     "Student1" => ["id" => 1 , "name" => "Ali", "age" => 17, "Number" => "03002767862", "city" =>"karachi"],
+//     "Student2" => ["id" => 2 , "name" => "Ahmed","age" => 18, "Number" => "03002767862", "city" => "karachi"],
+//     "Student3" => ["id" => 3 , "name" => "ayan","age" => 14, "Number" => "03002767862", "city" => "karachi"],
+//     "Student4" => ["id" => 4 , "name" => "abdullah","age" => 19, "Number" => "03002767862", "city" => "karachi"],
+//     "Student5" => ["id" => 5 , "name" => "tayyabbits","age" => 23, "Number" => "03072346976", "city" => "lahore"]
+// ];
+
+// foreach($Students as $key => $superarry){
+//    foreach($superarry as $vkey => $values){
+//     echo $vkey . " : " . $values . "<br>";
+//    }
+//    echo "<br>";
+
+// };
+
+
+
 $data = [
-    [1,"Ali",17,"03002767862","karachi"],
-    [2,"Ahmed",18,"03002767862","karachi"],
-    [3,"ayan",14,"03002767862","karachi"],
-    [4,"abdullah",19,"03002767862","karachi"],
-    [5,"tayyabbits",23,"03072346976","lahore"]
+    "Student1" => ["id" => 1 , "name" => "Ali", "age" => 17, "Number" => "03002767862", "city" =>"karachi"],
+    "Student2" => ["id" => 2 , "name" => "Ahmed","age" => 18, "Number" => "03002767862", "city" => "karachi"],
+    "Student3" => ["id" => 3 , "name" => "ayan","age" => 14, "Number" => "03002767862", "city" => "karachi"],
+    "Student4" => ["id" => 4 , "name" => "abdullah","age" => 19, "Number" => "03002767862", "city" => "karachi"],
+    "Student5" => ["id" => 5 , "name" => "tayyabbits","age" => 23, "Number" => "03072346976", "city" => "lahore"]
 ];
 
-// foreach($data as $row) {
-//     echo $row[0] . " | " . $row[1] . " | " . $row[2] . " | " . $row[3] . " | " . $row[4] . "<br>";
-// }
 
 
 
@@ -41,11 +57,11 @@ $data = [
         </tr>
     </thead>
     <tbody>
-        <?php foreach($data as $rows){;?>
-        <tr>
-             <?php foreach($rows as $Std){;?>
-            <td><?php echo $Std;?></td>
-             <?php };?>
+        <?php foreach($data as $rows => $Std){;?>
+        <tr>    
+             <?php foreach($Std as $values){;?>
+            <td><?php echo $values;?></td> 
+            <?php };?>
         </tr>
          <?php };?>
 
