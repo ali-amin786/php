@@ -13,63 +13,62 @@
 </head>
 
 <body>
-    <div class="container p-4 ">
-        <form action="" class="needs-validation" novalidate>
-            <div class="form-group ">
+    <div class="container p-4">
+        <h1>Student Data</h1>
+        <form action="13_2formhandling.php" class="needs-validation" novalidate method="post">
+            <div class="form-group mb-3">
                 <label for="validationCustom01" class="form-label">Name</label>
-                <input type="text" id="validationCustom01" class="form-control" required>
+                <input type="text" id="validationCustom01" class="form-control" required name ="uname">
                 <div class="invalid-feedback">
-                    please print your name.
+                    Please print your name.
                 </div>
             </div>
-            <div class="form-group mt-4">
+            <div class="form-group mb-3">
                 <label for="validationCustom02" class="form-label">Email</label>
-                <input type="email" id="validationCustom02" class="form-control" required>
+                <input type="email" id="validationCustom02" class="form-control" required name="uemail">
                 <div class="invalid-feedback">
                     Please provide a valid email.
                 </div>
             </div>
-            <div class="form-group  mt-4">
+            <div class="form-group mb-3">
                 <label for="validationCustomUsername" class="form-label">Feedback</label>
-                <textarea name="feedback" id="validationCustomUsername" class="form-control" required></textarea>
+                <textarea  id="validationCustomUsername" class="form-control" required name="ufeedback"></textarea>
                 <div class="invalid-feedback">
                     Please provide your feedback.
                 </div>
                 <div class="valid-feedback">
-                    looks good
+                    Looks good!
                 </div>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary mt-4" type="submit">Submit form</button>
+                <button class="btn btn-primary mt-2" type="submit">Submit form</button>
             </div>
         </form>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Validation Script -->
+    <script>
+        (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 
 </html>
-<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-    })()
-</script>
