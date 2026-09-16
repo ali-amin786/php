@@ -1,30 +1,19 @@
-<!-- <?php
-
-// print_r($_POST["uname"]);
-// print_r($_POST["uemail"]);
-// print_r($_POST["ufeedback"]);
-
-
-
-?> -->
-
+<?php print_r($_SERVER["REQUEST_METHOD"]) ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Student Record</title>
+    <title>Feedback Data</title>
 </head>
 
 <body>
-    <div class="container">
-        <table class="Table">
+
+    <div class="container mt-5">
+        <!-- Bootstrap class "table" (lowercase) -->
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -33,20 +22,19 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($_POST as $key){;?>
-                <tr>
-                     <?php foreach($key as $value){;?>
-                    <td>  <?php echo $value?></td>
-                      <?php }?>
-                </tr>
-                <?php }?>
+               
+
+                <?php foreach ($_POST as $value): ?>
+                    <td><?php echo $value; ?></td>
+                <?php endforeach; ?>
+
+
             </tbody>
+            <button type="button"  class="btn btn-primary"><a href="12_formhandling.php"></a>Back</button>
+
         </table>
     </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
